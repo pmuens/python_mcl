@@ -39,9 +39,7 @@ adjacency matrix.
 
 An example is the file example.csv in examples dir.
 
-try: 
-    mcl_clustering.py -d -e 3 <example_path>/example.csv
-
+try: `mcl_clustering.py -d -e 3 <example_path>/example.csv`
 
 ### Code
         
@@ -90,7 +88,6 @@ Output
       INS-R0010, National Research Institute for Mathematics and Computer
       Science in the Netherlands, Amsterdam, May 2000.
       ( http://www.cwi.nl/ftp/CWIreports/INS/INS-R0010.ps.Z )
-
 
 # License
 
