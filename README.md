@@ -5,16 +5,16 @@ described in http://www.library.uu.nl/digiarchief/dip/diss/1895620/inhoud.htm.
 
 This implementation is still in beta and is not yet optimized for large networks.
 
-![example] (example.png)
+![example](example.png)
 
 
-##Installation
+## Installation
 
-python setup.py install
+`python setup.py install`
 
-##Usage
+## Usage
 
-###Command line
+### Command line
 
     Usage: mcl_clustering.py [options] <input_matrix>
 
@@ -43,42 +43,44 @@ try:
     mcl_clustering.py -d -e 3 <example_path>/example.csv
 
 
-###Code
+### Code
         
-####Using numpy adjacency matrix
+#### Using numpy adjacency matrix
 
-    from mcl_clustering import mcl
+```python
+from mcl_clustering import mcl
 
-    A = <your matrix>
+A = <your matrix>
 
-    M, clusters = mcl(A, expand_factor = <expand_factor>,
-                       inflate_factor = <inflate_factor>,
-                       max_loop = <max_loop>,
-                       mult_factor = <mult_factor>)
+M, clusters = mcl(A, expand_factor = <expand_factor>,
+    inflate_factor = <inflate_factor>,
+    max_loop = <max_loop>,
+    mult_factor = <mult_factor>)
+```
 
-####Using a networkx graph
+#### Using a networkx graph
 
-    from mcl_clustering import networkx_mcl
+```python
+from mcl_clustering import networkx_mcl
 
-    G = <your graph>
+G = <your graph>
 
-    M, clusters = networkx_mcl(G, expand_factor = <expand_factor>,
-                       inflate_factor = <inflate_factor>,
-                       max_loop = <max_loop>,
-                       mult_factor = <mult_factor>)
+M, clusters = networkx_mcl(G, expand_factor = <expand_factor>,
+    inflate_factor = <inflate_factor>,
+    max_loop = <max_loop>,
+    mult_factor = <mult_factor>)
 
+Output
+    M = otuput matrix
+    clusters = dict with keys = [<cluster id>] values = [<vertex id>]
+```
+
+## Requirements
     
-    Output
-        M = otuput matrix
-        clusters = dict with keys = [<cluster id>] values = [<vertex id>]
+- numpy
+- networkx
 
-##Requirements
-    
-    numpy
-    networkx
-
-
-##References
+## References
 
 * [1]   Stijn van Dongen, Graph Clustering by Flow Simulation.
       PhD thesis, University of Utrecht, May 2000.
@@ -90,6 +92,6 @@ try:
       ( http://www.cwi.nl/ftp/CWIreports/INS/INS-R0010.ps.Z )
 
 
-# license
+# License
 
 MIT
